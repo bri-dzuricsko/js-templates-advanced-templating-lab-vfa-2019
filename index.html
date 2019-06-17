@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,19 +8,18 @@
     <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
   </head>
   <body>
-    <main id="main">
-    </main>
+    <main id="main"></main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
-    
-    <script id="recipie-template" type="text/x-handlebars-template">
-    <article>
-     <header><h2 id="nameHeader">{{name}}</h2></header>
+
+    <script id="recipe-template" type="text/x-handlebars-template">
+      <article>
+        <header><h2 id="nameHeader">{{name}}</h2></header>
         <div>{{> recipeDetailsPartial }}</div>
         <footer><a href="#" onclick="displayEditForm();">Edit Recipe</a></footer>
       </article>
-      </script>
-       <script id="recipe-details-partial" type="text/x-handlebars-template">
+    </script>
+    <script id="recipe-details-partial" type="text/x-handlebars-template">
       <p id="recipeDescription">{{description}}</p>
       <ul>
         {{#each ingredients}}
